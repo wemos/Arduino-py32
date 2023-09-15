@@ -25,308 +25,239 @@ menu.LowSpeedClockSource=Low Speed Clock Source
 
 menu.SupplyVoltage=Supply Voltage
 
+
 ###############################
-# Air001 Dev
+# LOLIN PY32F002A Board
 ###############################
 
-Air001Dev.name=Air001 Dev Chip
+LOLIN_PY32F002A_BOARD.name=LOLIN PY32F002A Board
 
-Air001Dev.upload.maximum_size=32768
-Air001Dev.upload.maximum_data_size=4096
+LOLIN_PY32F002A_BOARD.upload.maximum_size=32768
+LOLIN_PY32F002A_BOARD.upload.maximum_data_size=4096
 
-Air001Dev.upload.tool=AirISP
-Air001Dev.upload.tool.default=AirISP
+LOLIN_PY32F002A_BOARD.upload.tool=AirISP
+LOLIN_PY32F002A_BOARD.upload.tool.default=AirISP
 
-Air001Dev.build.core=AirMCU
-Air001Dev.build.board=AIR001_DEV
-Air001Dev.build.mcu=cortex-m0plus
-Air001Dev.build.series=AIR001xx
-Air001Dev.build.cmsis_lib_gcc=arm_cortexM0l_math
-Air001Dev.build.product_line=AIR001
-Air001Dev.build.variant=AIR001/AIR001_DEV
-Air001Dev.build.air_extra_flags=-D{build.product_line} {build.enable_usb} {build.xSerial}
-Air001Dev.build.drivers_include="-I{build.system.path}/Arduino-Air001-Drivers/{build.series}_HAL_Driver/Inc" "-I{build.system.path}/Arduino-Air001-Drivers/{build.series}_HAL_Driver/Src" "-I{build.system.path}/{build.series}" "-I{build.system.path}/Arduino-Air001-Drivers/CMSIS/Device/{build.series}/Include/" "-I{build.system.path}/Arduino-Air001-Drivers/CMSIS/Device/{build.series}/Source/gcc/" 
+LOLIN_PY32F002A_BOARD.build.core=AirMCU
+LOLIN_PY32F002A_BOARD.build.board=LOLIN_PY32F002A_BOARD
+LOLIN_PY32F002A_BOARD.build.mcu=cortex-m0plus
+LOLIN_PY32F002A_BOARD.build.series=AIR001xx
+LOLIN_PY32F002A_BOARD.build.cmsis_lib_gcc=arm_cortexM0l_math
+LOLIN_PY32F002A_BOARD.build.product_line=PY32
+LOLIN_PY32F002A_BOARD.build.variant=PY32/PY32F002A
+LOLIN_PY32F002A_BOARD.build.air_extra_flags=-D{build.product_line} {build.enable_usb} {build.xSerial}
+LOLIN_PY32F002A_BOARD.build.drivers_include="-I{build.system.path}/Arduino-Air001-Drivers/{build.series}_HAL_Driver/Inc" "-I{build.system.path}/Arduino-Air001-Drivers/{build.series}_HAL_Driver/Src" "-I{build.system.path}/{build.series}" "-I{build.system.path}/Arduino-Air001-Drivers/CMSIS/Device/{build.series}/Include/" "-I{build.system.path}/Arduino-Air001-Drivers/CMSIS/Device/{build.series}/Source/gcc/" 
 
-Air001Dev.menu.UploadSpeed.115200=115200
-Air001Dev.menu.UploadSpeed.115200.upload.speed=115200
-Air001Dev.menu.UploadSpeed.57600=57600
-Air001Dev.menu.UploadSpeed.57600.upload.speed=57600
-Air001Dev.menu.UploadSpeed.38400=38400
-Air001Dev.menu.UploadSpeed.38400.upload.speed=38400
-Air001Dev.menu.UploadSpeed.19200=19200
-Air001Dev.menu.UploadSpeed.19200.upload.speed=19200
-Air001Dev.menu.UploadSpeed.9600=9600
-Air001Dev.menu.UploadSpeed.9600.upload.speed=9600
-Air001Dev.menu.UploadSpeed.4800=4800
-Air001Dev.menu.UploadSpeed.4800.upload.speed=4800
-Air001Dev.menu.UploadSpeed.2400=2400
-Air001Dev.menu.UploadSpeed.2400.upload.speed=2400
-Air001Dev.menu.UploadSpeed.1200=1200
-Air001Dev.menu.UploadSpeed.1200.upload.speed=1200
+LOLIN_PY32F002A_BOARD.menu.UploadSpeed.115200=115200
+LOLIN_PY32F002A_BOARD.menu.UploadSpeed.115200.upload.speed=115200
+LOLIN_PY32F002A_BOARD.menu.UploadSpeed.57600=57600
+LOLIN_PY32F002A_BOARD.menu.UploadSpeed.57600.upload.speed=57600
+LOLIN_PY32F002A_BOARD.menu.UploadSpeed.38400=38400
+LOLIN_PY32F002A_BOARD.menu.UploadSpeed.38400.upload.speed=38400
+LOLIN_PY32F002A_BOARD.menu.UploadSpeed.19200=19200
+LOLIN_PY32F002A_BOARD.menu.UploadSpeed.19200.upload.speed=19200
+LOLIN_PY32F002A_BOARD.menu.UploadSpeed.9600=9600
+LOLIN_PY32F002A_BOARD.menu.UploadSpeed.9600.upload.speed=9600
+LOLIN_PY32F002A_BOARD.menu.UploadSpeed.4800=4800
+LOLIN_PY32F002A_BOARD.menu.UploadSpeed.4800.upload.speed=4800
+LOLIN_PY32F002A_BOARD.menu.UploadSpeed.2400=2400
+LOLIN_PY32F002A_BOARD.menu.UploadSpeed.2400.upload.speed=2400
+LOLIN_PY32F002A_BOARD.menu.UploadSpeed.1200=1200
+LOLIN_PY32F002A_BOARD.menu.UploadSpeed.1200.upload.speed=1200
+
+LOLIN_PY32F002A_BOARD.menu.xserial.generic=Enabled (generic 'Serial')
+LOLIN_PY32F002A_BOARD.menu.xserial.none=Enabled (no generic 'Serial')
+LOLIN_PY32F002A_BOARD.menu.xserial.none.build.xSerial=-DHAL_UART_MODULE_ENABLED -DHWSERIAL_NONE
+LOLIN_PY32F002A_BOARD.menu.xserial.disabled=Disabled (no Serial support)
+LOLIN_PY32F002A_BOARD.menu.xserial.disabled.build.xSerial=
+
+# debug
+LOLIN_PY32F002A_BOARD.menu.dbg.none=None
+LOLIN_PY32F002A_BOARD.menu.dbg.enable_sym=Symbols Enabled (-g)
+LOLIN_PY32F002A_BOARD.menu.dbg.enable_sym.build.flags.debug=-g -DNDEBUG
+LOLIN_PY32F002A_BOARD.menu.dbg.enable_log=Core logs Enabled
+LOLIN_PY32F002A_BOARD.menu.dbg.enable_log.build.flags.debug=
+LOLIN_PY32F002A_BOARD.menu.dbg.enable_all=Core Logs and Symbols Enabled (-g)
+LOLIN_PY32F002A_BOARD.menu.dbg.enable_all.build.flags.debug=-g
+
+# optimize
+LOLIN_PY32F002A_BOARD.menu.opt.osstd=Smallest (-Os default)
+LOLIN_PY32F002A_BOARD.menu.opt.oslto=Smallest (-Os) with LTO
+LOLIN_PY32F002A_BOARD.menu.opt.oslto.build.flags.optimize=-Os -flto
+LOLIN_PY32F002A_BOARD.menu.opt.o1std=Fast (-O1)
+LOLIN_PY32F002A_BOARD.menu.opt.o1std.build.flags.optimize=-O1
+LOLIN_PY32F002A_BOARD.menu.opt.o1lto=Fast (-O1) with LTO
+LOLIN_PY32F002A_BOARD.menu.opt.o1lto.build.flags.optimize=-O1 -flto
+LOLIN_PY32F002A_BOARD.menu.opt.o2std=Faster (-O2)
+LOLIN_PY32F002A_BOARD.menu.opt.o2std.build.flags.optimize=-O2
+LOLIN_PY32F002A_BOARD.menu.opt.o2lto=Faster (-O2) with LTO
+LOLIN_PY32F002A_BOARD.menu.opt.o2lto.build.flags.optimize=-O2 -flto
+LOLIN_PY32F002A_BOARD.menu.opt.o3std=Fastest (-O3)
+LOLIN_PY32F002A_BOARD.menu.opt.o3std.build.flags.optimize=-O3
+LOLIN_PY32F002A_BOARD.menu.opt.o3lto=Fastest (-O3) with LTO
+LOLIN_PY32F002A_BOARD.menu.opt.o3lto.build.flags.optimize=-O3 -flto
+LOLIN_PY32F002A_BOARD.menu.opt.ogstd=Debug (-Og)
+LOLIN_PY32F002A_BOARD.menu.opt.ogstd.build.flags.optimize=-Og
+LOLIN_PY32F002A_BOARD.menu.opt.o0std=No Optimization (-O0)
+LOLIN_PY32F002A_BOARD.menu.opt.o0std.build.flags.optimize=-O0
+
+# boot
+LOLIN_PY32F002A_BOARD.menu.BootConnection.defaule=default isp circuit
+LOLIN_PY32F002A_BOARD.menu.BootConnection.defaule.upload.boot=default_reset
+LOLIN_PY32F002A_BOARD.menu.BootConnection.direct=direct connect
+LOLIN_PY32F002A_BOARD.menu.BootConnection.direct.upload.boot=direct_connect
+
+LOLIN_PY32F002A_BOARD.build.extra_flags=-DAIR001xx_HSE_24M_HCLK_48M -DF_CPU=48000000 -DAIR001xx_LSC_LSI -DVDD_3V3 -DAIR001_DEV
+
+###############################
+# LOLIN PY32F002A Board(Dev)
+###############################
+
+LOLIN_PY32F002A_BOARD_DEV.name=LOLIN PY32F002A Board(Dev)
+
+LOLIN_PY32F002A_BOARD_DEV.upload.maximum_size=32768
+LOLIN_PY32F002A_BOARD_DEV.upload.maximum_data_size=4096
+
+LOLIN_PY32F002A_BOARD_DEV.upload.tool=AirISP
+LOLIN_PY32F002A_BOARD_DEV.upload.tool.default=AirISP
+
+LOLIN_PY32F002A_BOARD_DEV.build.core=AirMCU
+LOLIN_PY32F002A_BOARD_DEV.build.board=AIR001_DEV
+LOLIN_PY32F002A_BOARD_DEV.build.mcu=cortex-m0plus
+LOLIN_PY32F002A_BOARD_DEV.build.series=AIR001xx
+LOLIN_PY32F002A_BOARD_DEV.build.cmsis_lib_gcc=arm_cortexM0l_math
+LOLIN_PY32F002A_BOARD_DEV.build.product_line=AIR001
+LOLIN_PY32F002A_BOARD_DEV.build.variant=AIR001/AIR001_DEV
+LOLIN_PY32F002A_BOARD_DEV.build.air_extra_flags=-D{build.product_line} {build.enable_usb} {build.xSerial}
+LOLIN_PY32F002A_BOARD_DEV.build.drivers_include="-I{build.system.path}/Arduino-Air001-Drivers/{build.series}_HAL_Driver/Inc" "-I{build.system.path}/Arduino-Air001-Drivers/{build.series}_HAL_Driver/Src" "-I{build.system.path}/{build.series}" "-I{build.system.path}/Arduino-Air001-Drivers/CMSIS/Device/{build.series}/Include/" "-I{build.system.path}/Arduino-Air001-Drivers/CMSIS/Device/{build.series}/Source/gcc/" 
+
+LOLIN_PY32F002A_BOARD_DEV.menu.UploadSpeed.115200=115200
+LOLIN_PY32F002A_BOARD_DEV.menu.UploadSpeed.115200.upload.speed=115200
+LOLIN_PY32F002A_BOARD_DEV.menu.UploadSpeed.57600=57600
+LOLIN_PY32F002A_BOARD_DEV.menu.UploadSpeed.57600.upload.speed=57600
+LOLIN_PY32F002A_BOARD_DEV.menu.UploadSpeed.38400=38400
+LOLIN_PY32F002A_BOARD_DEV.menu.UploadSpeed.38400.upload.speed=38400
+LOLIN_PY32F002A_BOARD_DEV.menu.UploadSpeed.19200=19200
+LOLIN_PY32F002A_BOARD_DEV.menu.UploadSpeed.19200.upload.speed=19200
+LOLIN_PY32F002A_BOARD_DEV.menu.UploadSpeed.9600=9600
+LOLIN_PY32F002A_BOARD_DEV.menu.UploadSpeed.9600.upload.speed=9600
+LOLIN_PY32F002A_BOARD_DEV.menu.UploadSpeed.4800=4800
+LOLIN_PY32F002A_BOARD_DEV.menu.UploadSpeed.4800.upload.speed=4800
+LOLIN_PY32F002A_BOARD_DEV.menu.UploadSpeed.2400=2400
+LOLIN_PY32F002A_BOARD_DEV.menu.UploadSpeed.2400.upload.speed=2400
+LOLIN_PY32F002A_BOARD_DEV.menu.UploadSpeed.1200=1200
+LOLIN_PY32F002A_BOARD_DEV.menu.UploadSpeed.1200.upload.speed=1200
 
 # HSI/HSE选择和主频
-Air001Dev.menu.ClockSourceAndFrequency.HSI4M_HCLK4M=HSI 4Mhz, HCLK 4Mhz
-Air001Dev.menu.ClockSourceAndFrequency.HSI4M_HCLK4M.build.temp=-D{build.series}_HSI_4M_HCLK_4M
-Air001Dev.menu.ClockSourceAndFrequency.HSI4M_HCLK4M.build.f_cpu=4000000L
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSI4M_HCLK4M=HSI 4Mhz, HCLK 4Mhz
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSI4M_HCLK4M.build.temp=-D{build.series}_HSI_4M_HCLK_4M
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSI4M_HCLK4M.build.f_cpu=4000000L
 
-Air001Dev.menu.ClockSourceAndFrequency.HSI8M_HCLK8M=HSI 8Mhz, HCLK 8Mhz
-Air001Dev.menu.ClockSourceAndFrequency.HSI8M_HCLK8M.build.temp=-D{build.series}_HSI_8M_HCLK_8M
-Air001Dev.menu.ClockSourceAndFrequency.HSI8M_HCLK8M.build.f_cpu=8000000L
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSI8M_HCLK8M=HSI 8Mhz, HCLK 8Mhz
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSI8M_HCLK8M.build.temp=-D{build.series}_HSI_8M_HCLK_8M
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSI8M_HCLK8M.build.f_cpu=8000000L
 
-Air001Dev.menu.ClockSourceAndFrequency.HSI16M_HCLK16M=HSI 16Mhz, HCLK 16Mhz
-Air001Dev.menu.ClockSourceAndFrequency.HSI16M_HCLK16M.build.temp=-D{build.series}_HSI_16M_HCLK_16M
-Air001Dev.menu.ClockSourceAndFrequency.HSI16M_HCLK16M.build.f_cpu=16000000L
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSI16M_HCLK16M=HSI 16Mhz, HCLK 16Mhz
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSI16M_HCLK16M.build.temp=-D{build.series}_HSI_16M_HCLK_16M
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSI16M_HCLK16M.build.f_cpu=16000000L
 
-Air001Dev.menu.ClockSourceAndFrequency.HSI22_12M_HCLK22_12M=HSI 22.12Mhz, HCLK 22.12Mhz
-Air001Dev.menu.ClockSourceAndFrequency.HSI22_12M_HCLK22_12M.build.temp=-D{build.series}_HSI_22_12M_HCLK_22_12M
-Air001Dev.menu.ClockSourceAndFrequency.HSI22_12M_HCLK22_12M.build.f_cpu=22120000L
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSI22_12M_HCLK22_12M=HSI 22.12Mhz, HCLK 22.12Mhz
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSI22_12M_HCLK22_12M.build.temp=-D{build.series}_HSI_22_12M_HCLK_22_12M
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSI22_12M_HCLK22_12M.build.f_cpu=22120000L
 
 
-Air001Dev.menu.ClockSourceAndFrequency.HSI24M_HCLK24M=HSI 24Mhz, HCLK 24Mhz
-Air001Dev.menu.ClockSourceAndFrequency.HSI24M_HCLK24M.build.temp=-D{build.series}_HSI_24M_HCLK_24M
-Air001Dev.menu.ClockSourceAndFrequency.HSI24M_HCLK24M.build.f_cpu=24000000L
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSI24M_HCLK24M=HSI 24Mhz, HCLK 24Mhz
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSI24M_HCLK24M.build.temp=-D{build.series}_HSI_24M_HCLK_24M
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSI24M_HCLK24M.build.f_cpu=24000000L
 
-Air001Dev.menu.ClockSourceAndFrequency.HSI24M_HCLK48M=HSI 24Mhz, HCLK 48Mhz
-Air001Dev.menu.ClockSourceAndFrequency.HSI24M_HCLK48M.build.temp=-D{build.series}_HSI_24M_HCLK_48M
-Air001Dev.menu.ClockSourceAndFrequency.HSI24M_HCLK48M.build.f_cpu=48000000L
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSI24M_HCLK48M=HSI 24Mhz, HCLK 48Mhz
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSI24M_HCLK48M.build.temp=-D{build.series}_HSI_24M_HCLK_48M
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSI24M_HCLK48M.build.f_cpu=48000000L
 
-Air001Dev.menu.ClockSourceAndFrequency.HSE8M_HCLK8M=HSE 8Mhz, HCLK 8Mhz
-Air001Dev.menu.ClockSourceAndFrequency.HSE8M_HCLK8M.build.temp=-D{build.series}_HSE_8M_HCLK_8M
-Air001Dev.menu.ClockSourceAndFrequency.HSE8M_HCLK8M.build.f_cpu=8000000L
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSE8M_HCLK8M=HSE 8Mhz, HCLK 8Mhz
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSE8M_HCLK8M.build.temp=-D{build.series}_HSE_8M_HCLK_8M
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSE8M_HCLK8M.build.f_cpu=8000000L
 
-Air001Dev.menu.ClockSourceAndFrequency.HSE16M_HCLK16M=HSE 16Mhz, HCLK 16Mhz
-Air001Dev.menu.ClockSourceAndFrequency.HSE16M_HCLK16M.build.temp=-D{build.series}_HSE_16M_HCLK_16M
-Air001Dev.menu.ClockSourceAndFrequency.HSE16M_HCLK16M.build.f_cpu=16000000L
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSE16M_HCLK16M=HSE 16Mhz, HCLK 16Mhz
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSE16M_HCLK16M.build.temp=-D{build.series}_HSE_16M_HCLK_16M
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSE16M_HCLK16M.build.f_cpu=16000000L
 
-Air001Dev.menu.ClockSourceAndFrequency.HSE24M_HCLK24M=HSE 24Mhz, HCLK 24Mhz
-Air001Dev.menu.ClockSourceAndFrequency.HSE24M_HCLK24M.build.temp=-D{build.series}_HSE_24M_HCLK_24M
-Air001Dev.menu.ClockSourceAndFrequency.HSE24M_HCLK24M.build.f_cpu=24000000L
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSE24M_HCLK24M=HSE 24Mhz, HCLK 24Mhz
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSE24M_HCLK24M.build.temp=-D{build.series}_HSE_24M_HCLK_24M
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSE24M_HCLK24M.build.f_cpu=24000000L
 
-Air001Dev.menu.ClockSourceAndFrequency.HSE24M_HCLK48M=HSE 24Mhz, HCLK 48Mhz
-Air001Dev.menu.ClockSourceAndFrequency.HSE24M_HCLK48M.build.temp=-D{build.series}_HSE_24M_HCLK_48M
-Air001Dev.menu.ClockSourceAndFrequency.HSE24M_HCLK48M.build.f_cpu=48000000L
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSE24M_HCLK48M=HSE 24Mhz, HCLK 48Mhz
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSE24M_HCLK48M.build.temp=-D{build.series}_HSE_24M_HCLK_48M
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSE24M_HCLK48M.build.f_cpu=48000000L
 
-Air001Dev.menu.ClockSourceAndFrequency.HSE32M_HCLK32M=HSE 32Mhz, HCLK 32Mhz
-Air001Dev.menu.ClockSourceAndFrequency.HSE32M_HCLK32M.build.temp=-D{build.series}_HSE_32M_HCLK_32M
-Air001Dev.menu.ClockSourceAndFrequency.HSE32M_HCLK32M.build.f_cpu=32000000L
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSE32M_HCLK32M=HSE 32Mhz, HCLK 32Mhz
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSE32M_HCLK32M.build.temp=-D{build.series}_HSE_32M_HCLK_32M
+LOLIN_PY32F002A_BOARD_DEV.menu.ClockSourceAndFrequency.HSE32M_HCLK32M.build.f_cpu=32000000L
 
-Air001Dev.menu.LowSpeedClockSource.None=None
-Air001Dev.menu.LowSpeedClockSource.None.build.lsc_temp=-D{build.series}_LSC_NONE
+LOLIN_PY32F002A_BOARD_DEV.menu.LowSpeedClockSource.None=None
+LOLIN_PY32F002A_BOARD_DEV.menu.LowSpeedClockSource.None.build.lsc_temp=-D{build.series}_LSC_NONE
 
-Air001Dev.menu.LowSpeedClockSource.LSI=LSI 32.768Khz
-Air001Dev.menu.LowSpeedClockSource.LSI.build.lsc_temp=-D{build.series}_LSC_LSI
+LOLIN_PY32F002A_BOARD_DEV.menu.LowSpeedClockSource.LSI=LSI 32.768Khz
+LOLIN_PY32F002A_BOARD_DEV.menu.LowSpeedClockSource.LSI.build.lsc_temp=-D{build.series}_LSC_LSI
 
-Air001Dev.menu.LowSpeedClockSource.LSE=LSE 32.768Khz
-Air001Dev.menu.LowSpeedClockSource.LSE.build.lsc_temp=-D{build.series}_LSC_LSE
+LOLIN_PY32F002A_BOARD_DEV.menu.LowSpeedClockSource.LSE=LSE 32.768Khz
+LOLIN_PY32F002A_BOARD_DEV.menu.LowSpeedClockSource.LSE.build.lsc_temp=-D{build.series}_LSC_LSE
 
-Air001Dev.menu.xserial.generic=Enabled (generic 'Serial')
-Air001Dev.menu.xserial.none=Enabled (no generic 'Serial')
-Air001Dev.menu.xserial.none.build.xSerial=-DHAL_UART_MODULE_ENABLED -DHWSERIAL_NONE
-Air001Dev.menu.xserial.disabled=Disabled (no Serial support)
-Air001Dev.menu.xserial.disabled.build.xSerial=
+LOLIN_PY32F002A_BOARD_DEV.menu.xserial.generic=Enabled (generic 'Serial')
+LOLIN_PY32F002A_BOARD_DEV.menu.xserial.none=Enabled (no generic 'Serial')
+LOLIN_PY32F002A_BOARD_DEV.menu.xserial.none.build.xSerial=-DHAL_UART_MODULE_ENABLED -DHWSERIAL_NONE
+LOLIN_PY32F002A_BOARD_DEV.menu.xserial.disabled=Disabled (no Serial support)
+LOLIN_PY32F002A_BOARD_DEV.menu.xserial.disabled.build.xSerial=
 
 # debug
-Air001Dev.menu.dbg.none=None
-Air001Dev.menu.dbg.enable_sym=Symbols Enabled (-g)
-Air001Dev.menu.dbg.enable_sym.build.flags.debug=-g -DNDEBUG
-Air001Dev.menu.dbg.enable_log=Core logs Enabled
-Air001Dev.menu.dbg.enable_log.build.flags.debug=
-Air001Dev.menu.dbg.enable_all=Core Logs and Symbols Enabled (-g)
-Air001Dev.menu.dbg.enable_all.build.flags.debug=-g
+LOLIN_PY32F002A_BOARD_DEV.menu.dbg.none=None
+LOLIN_PY32F002A_BOARD_DEV.menu.dbg.enable_sym=Symbols Enabled (-g)
+LOLIN_PY32F002A_BOARD_DEV.menu.dbg.enable_sym.build.flags.debug=-g -DNDEBUG
+LOLIN_PY32F002A_BOARD_DEV.menu.dbg.enable_log=Core logs Enabled
+LOLIN_PY32F002A_BOARD_DEV.menu.dbg.enable_log.build.flags.debug=
+LOLIN_PY32F002A_BOARD_DEV.menu.dbg.enable_all=Core Logs and Symbols Enabled (-g)
+LOLIN_PY32F002A_BOARD_DEV.menu.dbg.enable_all.build.flags.debug=-g
 
 # optimize
-Air001Dev.menu.opt.osstd=Smallest (-Os default)
-Air001Dev.menu.opt.oslto=Smallest (-Os) with LTO
-Air001Dev.menu.opt.oslto.build.flags.optimize=-Os -flto
-Air001Dev.menu.opt.o1std=Fast (-O1)
-Air001Dev.menu.opt.o1std.build.flags.optimize=-O1
-Air001Dev.menu.opt.o1lto=Fast (-O1) with LTO
-Air001Dev.menu.opt.o1lto.build.flags.optimize=-O1 -flto
-Air001Dev.menu.opt.o2std=Faster (-O2)
-Air001Dev.menu.opt.o2std.build.flags.optimize=-O2
-Air001Dev.menu.opt.o2lto=Faster (-O2) with LTO
-Air001Dev.menu.opt.o2lto.build.flags.optimize=-O2 -flto
-Air001Dev.menu.opt.o3std=Fastest (-O3)
-Air001Dev.menu.opt.o3std.build.flags.optimize=-O3
-Air001Dev.menu.opt.o3lto=Fastest (-O3) with LTO
-Air001Dev.menu.opt.o3lto.build.flags.optimize=-O3 -flto
-Air001Dev.menu.opt.ogstd=Debug (-Og)
-Air001Dev.menu.opt.ogstd.build.flags.optimize=-Og
-Air001Dev.menu.opt.o0std=No Optimization (-O0)
-Air001Dev.menu.opt.o0std.build.flags.optimize=-O0
+LOLIN_PY32F002A_BOARD_DEV.menu.opt.osstd=Smallest (-Os default)
+LOLIN_PY32F002A_BOARD_DEV.menu.opt.oslto=Smallest (-Os) with LTO
+LOLIN_PY32F002A_BOARD_DEV.menu.opt.oslto.build.flags.optimize=-Os -flto
+LOLIN_PY32F002A_BOARD_DEV.menu.opt.o1std=Fast (-O1)
+LOLIN_PY32F002A_BOARD_DEV.menu.opt.o1std.build.flags.optimize=-O1
+LOLIN_PY32F002A_BOARD_DEV.menu.opt.o1lto=Fast (-O1) with LTO
+LOLIN_PY32F002A_BOARD_DEV.menu.opt.o1lto.build.flags.optimize=-O1 -flto
+LOLIN_PY32F002A_BOARD_DEV.menu.opt.o2std=Faster (-O2)
+LOLIN_PY32F002A_BOARD_DEV.menu.opt.o2std.build.flags.optimize=-O2
+LOLIN_PY32F002A_BOARD_DEV.menu.opt.o2lto=Faster (-O2) with LTO
+LOLIN_PY32F002A_BOARD_DEV.menu.opt.o2lto.build.flags.optimize=-O2 -flto
+LOLIN_PY32F002A_BOARD_DEV.menu.opt.o3std=Fastest (-O3)
+LOLIN_PY32F002A_BOARD_DEV.menu.opt.o3std.build.flags.optimize=-O3
+LOLIN_PY32F002A_BOARD_DEV.menu.opt.o3lto=Fastest (-O3) with LTO
+LOLIN_PY32F002A_BOARD_DEV.menu.opt.o3lto.build.flags.optimize=-O3 -flto
+LOLIN_PY32F002A_BOARD_DEV.menu.opt.ogstd=Debug (-Og)
+LOLIN_PY32F002A_BOARD_DEV.menu.opt.ogstd.build.flags.optimize=-Og
+LOLIN_PY32F002A_BOARD_DEV.menu.opt.o0std=No Optimization (-O0)
+LOLIN_PY32F002A_BOARD_DEV.menu.opt.o0std.build.flags.optimize=-O0
 
-Air001Dev.menu.SupplyVoltage.3V3=3.3V
-Air001Dev.menu.SupplyVoltage.3V3.build.sv_tmp=-DVDD_3V3
-Air001Dev.menu.SupplyVoltage.1V8=1.8V
-Air001Dev.menu.SupplyVoltage.3V3.build.sv_tmp=-DVDD_1V8
-Air001Dev.menu.SupplyVoltage.2V5=2.5V
-Air001Dev.menu.SupplyVoltage.3V3.build.sv_tmp=-DVDD_2V5
-Air001Dev.menu.SupplyVoltage.2V8=2.8V
-Air001Dev.menu.SupplyVoltage.3V3.build.sv_tmp=-DVDD_2V8
-Air001Dev.menu.SupplyVoltage.3V8=3.8V
-Air001Dev.menu.SupplyVoltage.3V3.build.sv_tmp=-DVDD_3V8
-Air001Dev.menu.SupplyVoltage.5V=5V
-Air001Dev.menu.SupplyVoltage.5V.build.sv_tmp=-DVDD_5V
+LOLIN_PY32F002A_BOARD_DEV.menu.SupplyVoltage.3V3=3.3V
+LOLIN_PY32F002A_BOARD_DEV.menu.SupplyVoltage.3V3.build.sv_tmp=-DVDD_3V3
+LOLIN_PY32F002A_BOARD_DEV.menu.SupplyVoltage.1V8=1.8V
+LOLIN_PY32F002A_BOARD_DEV.menu.SupplyVoltage.3V3.build.sv_tmp=-DVDD_1V8
+LOLIN_PY32F002A_BOARD_DEV.menu.SupplyVoltage.2V5=2.5V
+LOLIN_PY32F002A_BOARD_DEV.menu.SupplyVoltage.3V3.build.sv_tmp=-DVDD_2V5
+LOLIN_PY32F002A_BOARD_DEV.menu.SupplyVoltage.2V8=2.8V
+LOLIN_PY32F002A_BOARD_DEV.menu.SupplyVoltage.3V3.build.sv_tmp=-DVDD_2V8
+LOLIN_PY32F002A_BOARD_DEV.menu.SupplyVoltage.3V8=3.8V
+LOLIN_PY32F002A_BOARD_DEV.menu.SupplyVoltage.3V3.build.sv_tmp=-DVDD_3V8
+LOLIN_PY32F002A_BOARD_DEV.menu.SupplyVoltage.5V=5V
+LOLIN_PY32F002A_BOARD_DEV.menu.SupplyVoltage.5V.build.sv_tmp=-DVDD_5V
 
 # boot
-Air001Dev.menu.BootConnection.defaule=default isp circuit
-Air001Dev.menu.BootConnection.defaule.upload.boot=default_reset
-Air001Dev.menu.BootConnection.direct=direct connect
-Air001Dev.menu.BootConnection.direct.upload.boot=direct_connect
+LOLIN_PY32F002A_BOARD_DEV.menu.BootConnection.defaule=default isp circuit
+LOLIN_PY32F002A_BOARD_DEV.menu.BootConnection.defaule.upload.boot=default_reset
+LOLIN_PY32F002A_BOARD_DEV.menu.BootConnection.direct=direct connect
+LOLIN_PY32F002A_BOARD_DEV.menu.BootConnection.direct.upload.boot=direct_connect
 
-Air001Dev.build.extra_flags={build.temp} -DF_CPU={build.f_cpu} {build.lsc_temp} {build.sv_tmp} -DAIR001_DEV
+LOLIN_PY32F002A_BOARD_DEV.build.extra_flags={build.temp} -DF_CPU={build.f_cpu} {build.lsc_temp} {build.sv_tmp} -DAIR001_DEV
 # Upload menu
 
-###############################
-# Air32F103xx
-###############################
-
-Air32F103xx.name=Air32F103 Series
-
-Air32F103xx.upload.maximum_size=0
-# 96KB的RAM
-Air32F103xx.upload.maximum_data_size=98304 
-
-Air32F103xx.upload.tool=AirISP
-Air32F103xx.upload.tool.default=AirISP
-
-Air32F103xx.build.core=AirMCU
-Air32F103xx.build.board=AIR32F103
-Air32F103xx.build.mcu=cortex-m3
-Air32F103xx.build.series=AIR32F103xx
-Air32F103xx.build.cmsis_lib_gcc=arm_cortexM3l_math
-Air32F103xx.build.air_extra_flags=-D{build.product_line} {build.enable_usb} {build.xSerial}
-Air32F103xx.build.drivers_include="-I{build.system.path}/Arduino-Air32F103-Drivers/AIR32F1xx_HAL_Driver/Inc" "-I{build.system.path}/Arduino-Air32F103-Drivers/AIR32F1xx_HAL_Driver/Src" "-I{build.system.path}/AIR32F103xx" "-I{build.system.path}/Arduino-Air32F103-Drivers/CMSIS/Device/AIR32F1xx/Include/" "-I{build.system.path}/Arduino-Air32F103-Drivers/CMSIS/Device/AIR32F1xx/Source/gcc/" 
-
-Air32F103xx.menu.UploadSpeed.115200=115200
-Air32F103xx.menu.UploadSpeed.115200.upload.speed=115200
-Air32F103xx.menu.UploadSpeed.57600=57600
-Air32F103xx.menu.UploadSpeed.57600.upload.speed=57600
-Air32F103xx.menu.UploadSpeed.38400=38400
-Air32F103xx.menu.UploadSpeed.38400.upload.speed=38400
-Air32F103xx.menu.UploadSpeed.19200=19200
-Air32F103xx.menu.UploadSpeed.19200.upload.speed=19200
-Air32F103xx.menu.UploadSpeed.9600=9600
-Air32F103xx.menu.UploadSpeed.9600.upload.speed=9600
-Air32F103xx.menu.UploadSpeed.4800=4800
-Air32F103xx.menu.UploadSpeed.4800.upload.speed=4800
-Air32F103xx.menu.UploadSpeed.2400=2400
-Air32F103xx.menu.UploadSpeed.2400.upload.speed=2400
-Air32F103xx.menu.UploadSpeed.1200=1200
-Air32F103xx.menu.UploadSpeed.1200.upload.speed=1200
-
-Air32F103xx.menu.ClockSoure.HSE8M=HSE (8Mhz)
-Air32F103xx.menu.ClockSoure.HSE8M.build.ClockSoureTemp=-DUSE_HSE
-Air32F103xx.menu.ClockSoure.HSE8M.build.ClockSoure=8000000L
-Air32F103xx.menu.ClockSoure.HSE16M=HSE (16Mhz)
-Air32F103xx.menu.ClockSoure.HSE16M.build.ClockSoureTemp=-DUSE_HSE
-Air32F103xx.menu.ClockSoure.HSE16M.build.ClockSoure=16000000L
-Air32F103xx.menu.ClockSoure.HSI8M=HSI (8Mhz)
-Air32F103xx.menu.ClockSoure.HSI8M.build.ClockSoureTemp=-DUSE_HSI
-Air32F103xx.menu.ClockSoure.HSI8M.build.ClockSoure=8000000L
-
-Air32F103xx.menu.SysFreq.PCLK72M=72Mhz
-Air32F103xx.menu.SysFreq.PCLK72M.build.f_cpu=72000000L
-Air32F103xx.menu.SysFreq.PCLK64M=64Mhz
-Air32F103xx.menu.SysFreq.PCLK64M.build.f_cpu=64000000L
-Air32F103xx.menu.SysFreq.PCLK216M=216Mhz
-Air32F103xx.menu.SysFreq.PCLK216M.build.f_cpu=216000000L
-Air32F103xx.menu.SysFreq.PCLK256M=256Mhz
-Air32F103xx.menu.SysFreq.PCLK256M.build.f_cpu=256000000L
-
-Air32F103xx.menu.pnum.AIR32F103CB=Air32F103CBT6
-Air32F103xx.menu.pnum.AIR32F103CB.upload.maximum_size=131072
-Air32F103xx.menu.pnum.AIR32F103CB.build.product_line=AIR32F103xB
-Air32F103xx.menu.pnum.AIR32F103CB.build.board=AIR32F103CB
-Air32F103xx.menu.pnum.AIR32F103CB.build.variant=AIR32F103/F103CB
-
-# boot
-Air32F103xx.menu.BootConnection.defaule=default isp circuit
-Air32F103xx.menu.BootConnection.defaule.upload.boot=default_reset
-Air32F103xx.menu.BootConnection.direct=direct connect
-Air32F103xx.menu.BootConnection.direct.upload.boot=direct_connect
-
-Air32F103xx.build.extra_flags={build.ClockSoureTemp} -DCLOCK_SOURCE={build.ClockSoure} -DF_CPU={build.f_cpu} -DAIR32F1xx
-
-###############################
-# AirM2M Air001 Board
-###############################
-
-AirM2M_Air001_Board.name=AirM2M Air001 Board
-
-AirM2M_Air001_Board.upload.maximum_size=32768
-AirM2M_Air001_Board.upload.maximum_data_size=4096
-
-AirM2M_Air001_Board.upload.tool=AirISP
-AirM2M_Air001_Board.upload.tool.default=AirISP
-
-AirM2M_Air001_Board.build.core=AirMCU
-AirM2M_Air001_Board.build.board=AirM2M_Air001_Board
-AirM2M_Air001_Board.build.mcu=cortex-m0plus
-AirM2M_Air001_Board.build.series=AIR001xx
-AirM2M_Air001_Board.build.cmsis_lib_gcc=arm_cortexM0l_math
-AirM2M_Air001_Board.build.product_line=AIR001
-AirM2M_Air001_Board.build.variant=AIR001/AirM2M_Air001_Board
-AirM2M_Air001_Board.build.air_extra_flags=-D{build.product_line} {build.enable_usb} {build.xSerial}
-AirM2M_Air001_Board.build.drivers_include="-I{build.system.path}/Arduino-Air001-Drivers/{build.series}_HAL_Driver/Inc" "-I{build.system.path}/Arduino-Air001-Drivers/{build.series}_HAL_Driver/Src" "-I{build.system.path}/{build.series}" "-I{build.system.path}/Arduino-Air001-Drivers/CMSIS/Device/{build.series}/Include/" "-I{build.system.path}/Arduino-Air001-Drivers/CMSIS/Device/{build.series}/Source/gcc/" 
-
-AirM2M_Air001_Board.menu.UploadSpeed.115200=115200
-AirM2M_Air001_Board.menu.UploadSpeed.115200.upload.speed=115200
-AirM2M_Air001_Board.menu.UploadSpeed.57600=57600
-AirM2M_Air001_Board.menu.UploadSpeed.57600.upload.speed=57600
-AirM2M_Air001_Board.menu.UploadSpeed.38400=38400
-AirM2M_Air001_Board.menu.UploadSpeed.38400.upload.speed=38400
-AirM2M_Air001_Board.menu.UploadSpeed.19200=19200
-AirM2M_Air001_Board.menu.UploadSpeed.19200.upload.speed=19200
-AirM2M_Air001_Board.menu.UploadSpeed.9600=9600
-AirM2M_Air001_Board.menu.UploadSpeed.9600.upload.speed=9600
-AirM2M_Air001_Board.menu.UploadSpeed.4800=4800
-AirM2M_Air001_Board.menu.UploadSpeed.4800.upload.speed=4800
-AirM2M_Air001_Board.menu.UploadSpeed.2400=2400
-AirM2M_Air001_Board.menu.UploadSpeed.2400.upload.speed=2400
-AirM2M_Air001_Board.menu.UploadSpeed.1200=1200
-AirM2M_Air001_Board.menu.UploadSpeed.1200.upload.speed=1200
-
-AirM2M_Air001_Board.menu.xserial.generic=Enabled (generic 'Serial')
-AirM2M_Air001_Board.menu.xserial.none=Enabled (no generic 'Serial')
-AirM2M_Air001_Board.menu.xserial.none.build.xSerial=-DHAL_UART_MODULE_ENABLED -DHWSERIAL_NONE
-AirM2M_Air001_Board.menu.xserial.disabled=Disabled (no Serial support)
-AirM2M_Air001_Board.menu.xserial.disabled.build.xSerial=
-
-# debug
-AirM2M_Air001_Board.menu.dbg.none=None
-AirM2M_Air001_Board.menu.dbg.enable_sym=Symbols Enabled (-g)
-AirM2M_Air001_Board.menu.dbg.enable_sym.build.flags.debug=-g -DNDEBUG
-AirM2M_Air001_Board.menu.dbg.enable_log=Core logs Enabled
-AirM2M_Air001_Board.menu.dbg.enable_log.build.flags.debug=
-AirM2M_Air001_Board.menu.dbg.enable_all=Core Logs and Symbols Enabled (-g)
-AirM2M_Air001_Board.menu.dbg.enable_all.build.flags.debug=-g
-
-# optimize
-AirM2M_Air001_Board.menu.opt.osstd=Smallest (-Os default)
-AirM2M_Air001_Board.menu.opt.oslto=Smallest (-Os) with LTO
-AirM2M_Air001_Board.menu.opt.oslto.build.flags.optimize=-Os -flto
-AirM2M_Air001_Board.menu.opt.o1std=Fast (-O1)
-AirM2M_Air001_Board.menu.opt.o1std.build.flags.optimize=-O1
-AirM2M_Air001_Board.menu.opt.o1lto=Fast (-O1) with LTO
-AirM2M_Air001_Board.menu.opt.o1lto.build.flags.optimize=-O1 -flto
-AirM2M_Air001_Board.menu.opt.o2std=Faster (-O2)
-AirM2M_Air001_Board.menu.opt.o2std.build.flags.optimize=-O2
-AirM2M_Air001_Board.menu.opt.o2lto=Faster (-O2) with LTO
-AirM2M_Air001_Board.menu.opt.o2lto.build.flags.optimize=-O2 -flto
-AirM2M_Air001_Board.menu.opt.o3std=Fastest (-O3)
-AirM2M_Air001_Board.menu.opt.o3std.build.flags.optimize=-O3
-AirM2M_Air001_Board.menu.opt.o3lto=Fastest (-O3) with LTO
-AirM2M_Air001_Board.menu.opt.o3lto.build.flags.optimize=-O3 -flto
-AirM2M_Air001_Board.menu.opt.ogstd=Debug (-Og)
-AirM2M_Air001_Board.menu.opt.ogstd.build.flags.optimize=-Og
-AirM2M_Air001_Board.menu.opt.o0std=No Optimization (-O0)
-AirM2M_Air001_Board.menu.opt.o0std.build.flags.optimize=-O0
-
-# boot
-AirM2M_Air001_Board.menu.BootConnection.defaule=default isp circuit
-AirM2M_Air001_Board.menu.BootConnection.defaule.upload.boot=default_reset
-AirM2M_Air001_Board.menu.BootConnection.direct=direct connect
-AirM2M_Air001_Board.menu.BootConnection.direct.upload.boot=direct_connect
-
-AirM2M_Air001_Board.build.extra_flags=-DAIR001xx_HSE_24M_HCLK_48M -DF_CPU=48000000 -DAIR001xx_LSC_LSI -DVDD_3V3 -DAIR001_DEV
