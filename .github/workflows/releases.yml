@@ -27,15 +27,17 @@ jobs:
       
       - name: Zip folder and save
         run: |
-          mkdir -p Arduino-AirMCU
-          cp -r dest.git/* Arduino-AirMCU/
-          zip -r AirMCU-${GITHUB_REF#refs/tags/}.zip Arduino-AirMCU
+          mkdir -p Arduino-py32
+          cp -r dest.git/* Arduino-py32/
+          zip -r py32-${GITHUB_REF#refs/tags/}.zip Arduino-py32
 
       - uses: ncipollo/release-action@v1
         with:
           artifacts: "*.zip"
           allowUpdates: true
-
+      - name: test
+        run: |
+          
       - name: Send repository_dispatch event to package json
         run: |
           curl -X POST https://api.github.com/repos/wemos/Arduino-pack-json-ci/dispatches \
