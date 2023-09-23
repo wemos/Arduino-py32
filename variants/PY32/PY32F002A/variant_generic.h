@@ -73,7 +73,7 @@
 
 // On-board LED pin number
 #ifndef LED_BUILTIN
-  #define LED_BUILTIN           PB1
+  #define LED_BUILTIN           PB0
 #endif
 
 // On-board user button
